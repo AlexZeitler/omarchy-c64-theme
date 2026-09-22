@@ -1,0 +1,15 @@
+# The bar shares the keycap ground with the windows and the panels.
+#
+# It cannot be the beige of the case: panels take their text colour from the
+# bar (Ui/Panel.qml passes bar.foreground on), and PanelSectionHeader draws
+# that colour through Qt.darker(foreground, 1.4). A dark bar text therefore
+# turns every section heading in every panel almost black, on a ground that is
+# already dark.
+[bar]
+background       = "#312b20"
+background-alpha = 1.0
+text             = "#d3ccb9"
+active           = "#d12625"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28

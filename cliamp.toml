@@ -1,0 +1,15 @@
+# cliamp knows seven slots. Five come straight from colors.toml. The accent is
+# the beige of the case, so the player frames its picture the way the machine
+# framed the screen.
+#
+# The yellow slot carries the OMARCHY logo, a block filling a quarter of the
+# window. The theme's own yellow turns that block into the loudest surface on the
+# screen, so this slot takes the light blue of the characters instead. The
+# logo then sits in the field the way text does.
+bg        = "#312b20"
+fg        = "#d3ccb9"
+bright_fg = "#ffffff"
+accent    = "#f1cb29"
+yellow    = "#d3ccb9"
+green     = "#4bb249"
+red       = "#d12625"

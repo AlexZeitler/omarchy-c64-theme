@@ -1,0 +1,46 @@
+# Commodore 64
+# The machine, not the picture. Every grey step is measured off the case in a
+# photograph: the dark keycaps carry the ground, the beige of the top carries
+# the text. The chromatic slots are the five stripes of the rainbow badge.
+mode = "dark"
+
+# The badge itself. The active window border runs the five stripes in their
+# order on the case, and the accent is the middle one.
+accent = "#f1cb29"
+hyprland_active_border = "rgba(d12625ff) rgba(da6241ff) rgba(f1cb29ff) rgba(4bb249ff) rgba(009edaff) 45deg"
+hyprland_inactive_border = "rgba(635c4baa)"
+
+# RVS ON: the C64 inverts foreground and background, nothing else.
+selection = "#494335"
+selection_background = "#d3ccb9"
+selection_foreground = "#312b20"
+muted = "#948d73"
+
+background = "#312b20"
+dark_background = "#251d0e"
+darker_background = "#1c170f"
+lighter_background = "#494335"
+
+foreground = "#d3ccb9"
+dark_foreground = "#928b71"
+light_foreground = "#ffffff"
+bright_foreground = "#ffffff"
+
+red = "#d12625"
+orange = "#da6241"
+magenta = "#da6241"
+purple = "#da6241"
+brown = "#635c4b"
+
+blue = "#009eda"
+cyan = "#9bd3ea"
+green = "#4bb249"
+yellow = "#f1cb29"
+
+bright_red = "#e97a73"
+bright_orange = "#f69559"
+bright_magenta = "#f69559"
+bright_blue = "#9bd3ea"
+bright_cyan = "#c9e6f0"
+bright_green = "#b6e09c"
+bright_yellow = "#fced74"

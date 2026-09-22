@@ -1,0 +1,7 @@
+# Tooltips float over the windows, so they share the keycap ground.
+[tooltip]
+background       = "#312b20"
+background-alpha = 0.97
+text             = "#d3ccb9"
+border           = "#5d594f"
+border-alpha     = 1.0

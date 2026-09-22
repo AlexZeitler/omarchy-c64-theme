@@ -1,0 +1,30 @@
+# Control chrome sits on the popup surface, which is the keycap ground, so it
+# is drawn in the beige of the case.
+[controls]
+normal-color        = "#d3ccb9"
+normal-fill-alpha   = 0.06
+normal-border       = "#d3ccb9"
+normal-border-width = 1
+normal-border-alpha = 0.45
+
+hover-cursor-color        = "#d3ccb9"
+hover-cursor-fill-alpha   = 0.12
+hover-cursor-border       = "#d3ccb9"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.35
+
+focus-color        = "#d3ccb9"
+focus-fill-alpha   = 0.12
+focus-border       = "#d3ccb9"
+focus-border-width = 1
+focus-border-alpha = 0.35
+
+# A tint, not a solid fill: the label on top stays beige.
+selected-color        = "#d3ccb9"
+selected-fill-alpha   = 0.22
+selected-border       = "#d3ccb9"
+selected-border-width = 1
+selected-border-alpha = 0.7
+
+pressed-fill-alpha   = 0.25
+selection-fill-alpha = 0.35

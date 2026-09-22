@@ -1,0 +1,14 @@
+# Dropdowns, panels and the volume OSD.
+#
+# The OSD has no colour group of its own: it draws its card on the theme
+# background and its label with popups.text, at 45 percent for the secondary
+# line. A popup surface in the case beige therefore forces one value to stand
+# on the beige and on the dark ground at once, and a middle value stands on
+# neither. So the popups take the keycaps, the same ground the windows use,
+# and the text takes the beige of the case.
+[popups]
+background       = "#312b20"
+background-alpha = 1.0
+text             = "#d3ccb9"
+border           = "#5d594f"
+border-alpha     = 1.0

@@ -1,0 +1,14 @@
+# Same six tokens as the menu. The card keeps its slight translucency.
+[launcher]
+background                = "#312b20"
+background-alpha          = 0.95
+text                      = "#d3ccb9"
+border                    = "#5d594f"
+border-alpha              = 1.0
+scrim                     = "#1c170f"
+scrim-alpha               = 0.5
+selected-background       = "#d3ccb9"
+selected-background-alpha = 0.10
+selected-text             = "#f1cb29"
+selected-border           = "#5d594f"
+selected-border-alpha     = 0.4
