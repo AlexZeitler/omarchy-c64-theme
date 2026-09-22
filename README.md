@@ -109,5 +109,5 @@ template the file does nothing.
 
 ## Licence
 
-The colours and the configuration files are MIT licensed. The wallpapers are
-not mine and carry their own terms.
+Everything in this repository is MIT licensed, the colours, the configuration
+files and the wallpapers alike. See `LICENSE`.
