@@ -65,14 +65,43 @@ distinction in each pair, and `bright_blue` and `cyan` hold the same value.
 ## Wallpapers
 
 Six wallpapers ship in `backgrounds/`, all at 3840 by 2160. Omarchy cycles
-through them.
+through them. Click a thumbnail to open the full resolution.
 
-- `01-commodore-minimal` - the badge and its stripes along the lower edge
-- `02-basic-boot` - the BASIC V2 boot text over the keyboard, power LED lit
-- `03-commodore-logo` - the wordmark centred, stripes running out both sides
-- `04-power-led` - stripes across the lower third, the power lamp top right
-- `05-mainboard` - the board seen from above, stripes along the bottom
-- `06-6502` - a 6502 resting on a die shot of itself
+### The badge
+
+The badge and its stripes along the lower edge.
+
+[![The badge](assets/01-commodore-minimal-thumb.jpg)](backgrounds/01-commodore-minimal.png)
+
+### The boot screen
+
+The BASIC V2 boot text over the keyboard, power lamp lit.
+
+[![The boot screen](assets/02-basic-boot-thumb.jpg)](backgrounds/02-basic-boot.png)
+
+### The wordmark
+
+Centred, with the stripes running out to both sides.
+
+[![The wordmark](assets/03-commodore-logo-thumb.jpg)](backgrounds/03-commodore-logo.png)
+
+### The power lamp
+
+Stripes across the lower third, the lamp in the top right corner.
+
+[![The power lamp](assets/04-power-led-thumb.jpg)](backgrounds/04-power-led.png)
+
+### The mainboard
+
+The board seen from above, stripes along the bottom.
+
+[![The mainboard](assets/05-mainboard-thumb.jpg)](backgrounds/05-mainboard.png)
+
+### The 6502
+
+A 6502 resting on a die shot of itself.
+
+[![The 6502](assets/06-6502-thumb.jpg)](backgrounds/06-6502.png)
 
 ## What the theme ships
 
