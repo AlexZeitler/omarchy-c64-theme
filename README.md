@@ -103,38 +103,103 @@ A 6502 resting on a die shot of itself.
 
 [![The 6502](assets/06-6502-thumb.jpg)](backgrounds/06-6502.png)
 
-## What the theme ships
+## Extras (optional)
 
-The theme carries `colors.toml`, and Omarchy generates the file for every
-program from it. Beyond that it ships four things Omarchy has no template for.
+The theme works as installed. The pieces below reach programs Omarchy does not
+theme, and each needs one step from you. Omarchy refuses to run anything a
+cloned theme brings along on its own, so none of them installs automatically.
 
-**`gtk.css` and `hooks/gtk`**
-GTK reads `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css` and
-nothing else. The hook writes the theme's block into both files, between two
-markers, and removes it again for a theme without GTK colours. Link it once:
+All four apply to every theme, not only to this one. A theme that does not ask
+for them gets Omarchy's usual result. Only one file can sit under each name, so
+installing the same extra from another theme replaces this one.
+
+The commands copy rather than link. A copy keeps working after the theme is
+removed, but it does not follow an update: run the command again after
+`omarchy theme update`.
+
+### Neovim
+
+The template puts floating windows on the editor field, bounded by a frame in
+the accent. It removes the coloured fill behind a markdown heading, which
+render-markdown.nvim otherwise takes from the git diff colours. And it makes a
+selection swap the two theme colours instead of tinting the line. It acts only
+when the current theme ships `neovim.surfaces` containing `flat`.
 
 ```bash
-ln -s ~/.config/omarchy/themes/c64/hooks/gtk \
-  ~/.config/omarchy/hooks/theme-set.d/gtk
+mkdir -p ~/.config/omarchy/themed
+cp ~/.config/omarchy/themes/c64/themed/neovim.lua.tpl \
+  ~/.config/omarchy/themed/
+omarchy theme set c64
 ```
 
-**`cliamp.toml` and `hooks/cliamp`**
-The palette for the cliamp player. Its yellow slot carries the OMARCHY logo, a
-block filling a quarter of the window, so that slot takes the case beige
-instead of the gold.
+To remove it:
 
-**`fastfetch.json` and `hooks/fastfetch`**
-Sets the fastfetch logo colour. The hook touches that field only and leaves
-the per-module colours alone.
+```bash
+rm ~/.config/omarchy/themed/neovim.lua.tpl
+omarchy theme set c64
+```
 
-**`neovim.surfaces`**
-A marker file, not a colour file. A theme cannot ship a `neovim.lua`: Omarchy
-refuses Lua that comes out of a cloned repository. The file asks a template
-under `~/.config/omarchy/themed/` for three things: floating windows on the
-editor field, bounded by a frame in the accent; no coloured fill behind a
-markdown heading, which render-markdown.nvim otherwise takes from the git
-diff colours; and a selection that swaps the two theme colours. Without that
-template the file does nothing.
+### GTK
+
+GTK reads `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css` and
+nothing else, so Omarchy's `gtk.css` never reaches Nautilus or the GTK file
+dialogs. The hook writes the theme's block into both files between its own
+markers, and removes it again for a theme without a `gtk.css`. Anything you
+wrote into those files yourself survives.
+
+```bash
+omarchy hook install theme-set ~/.config/omarchy/themes/c64/hooks/gtk
+omarchy theme set c64
+```
+
+To remove it:
+
+```bash
+~/.config/omarchy/hooks/theme-set.d/gtk --remove
+rm ~/.config/omarchy/hooks/theme-set.d/gtk
+```
+
+### cliamp
+
+`cliamp` reads its own directory, `~/.config/cliamp/themes/`. The hook copies
+`cliamp.toml` there under the name of the current theme and selects it, also
+in a running instance. Its yellow slot carries the OMARCHY logo, a block
+filling a quarter of the window, so that slot takes the case beige instead of
+the gold. Before its first write the hook backs up
+`~/.config/cliamp/config.toml`; a theme without a `cliamp.toml` restores it.
+
+```bash
+omarchy hook install theme-set ~/.config/omarchy/themes/c64/hooks/cliamp
+omarchy theme set c64
+```
+
+To remove it:
+
+```bash
+~/.config/omarchy/hooks/theme-set.d/cliamp --remove
+rm ~/.config/omarchy/hooks/theme-set.d/cliamp
+```
+
+### fastfetch
+
+The hook sets the logo colour from `fastfetch.json` and touches nothing else.
+It needs `jq` and a user configuration, because the one under `/etc` belongs to
+the package:
+
+```bash
+mkdir -p ~/.config/fastfetch
+cp /etc/fastfetch/config.jsonc ~/.config/fastfetch/
+omarchy hook install theme-set ~/.config/omarchy/themes/c64/hooks/fastfetch
+omarchy theme set c64
+```
+
+Before its first write the hook backs up the configuration; a theme without a
+`fastfetch.json` restores it. To remove it:
+
+```bash
+~/.config/omarchy/hooks/theme-set.d/fastfetch --remove
+rm ~/.config/omarchy/hooks/theme-set.d/fastfetch
+```
 
 ## Licence
 
